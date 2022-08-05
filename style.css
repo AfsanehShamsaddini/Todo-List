@@ -146,6 +146,7 @@ textarea{
     appearance: button;
     outline: none;
     margin-top: 1rem;
+    cursor: pointer;
    
   
   }
@@ -170,6 +171,7 @@ textarea{
 
 .todo-check__dec {
     accent-color: var(--primary-color);
+    cursor: pointer;
   }
 
 .form-container__input{
@@ -282,13 +284,15 @@ textarea{
    
     font-size:1.4rem;
     padding:0.5rem;
+    cursor: pointer; 
+}
+.todo-icon-type{
+    color:#000000 !important;
     cursor: pointer;
-    
-   
-    
 }
 .fa-pen{
     color:#000000 !important;
+    cursor: pointer;
 }
 .fa-trash-can{
     color:red;

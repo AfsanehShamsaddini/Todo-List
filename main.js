@@ -22,7 +22,8 @@ function addTodofunc(e){
    
     e.preventDefault();
     if (todoInput.value===""){
-        alert("Please enter task title")
+        alert("Please enter task title");
+        return false;
     }
     if(addTodo.textContent==="Edit"){
         addTodo.textContent="New";
@@ -32,7 +33,6 @@ function addTodofunc(e){
         todoDiv.innerHTML=newTodo;
         addTodo.appendChild(todoDiv);
     }
-    
     const todoDiv=document.createElement("div");
     todoDiv.classList.add("todo");
     const newTodo=` 
