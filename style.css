@@ -117,13 +117,16 @@ textarea{
 .add{
     display:flex;
     flex-direction: row-reverse;
+
+    justify-content:center;
+    
 }
 .todo--header{
     margin-bottom: 3rem;
 }
 
 .icon {
-    padding: 9px;
+    padding: 0.9rem;
     background: var(--primary-color);
     color: white;
     min-width: 40px;
@@ -138,7 +141,7 @@ textarea{
     border: 1px solid var(--body-color);
     border-radius: 5px;
     padding: 12px;
-    width: 430px;
+    width: 100%;
     -webkit-appearance: button;
     appearance: button;
     outline: none;
@@ -181,6 +184,12 @@ textarea{
   width: 100%;
 
 }
+@media screen and (max-width:768px){
+    .add{
+        width: 100%;
+        
+    }
+}
   @media screen and (min-width:1024px){
 
     .icon {
@@ -197,7 +206,7 @@ textarea{
         width: 250px;
       
       }
-   
+      
 }
 /*-------End of Form-container---------*/
 /*-------Start of Container---------*/

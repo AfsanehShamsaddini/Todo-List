@@ -21,6 +21,9 @@ isCheck.addEventListener('click',isChecked);
 function addTodofunc(e){
    
     e.preventDefault();
+    if (todoInput.value===""){
+        alert("Please enter task title")
+    }
     if(addTodo.textContent==="Edit"){
         addTodo.textContent="New";
         const todoDiv=document.createElement("div");
@@ -51,6 +54,7 @@ function addTodofunc(e){
     todoList.appendChild(todoDiv);
     saveLocalTodos(todoInput.value,todoDescription.value,typeTodo.value);
     todoInput.value="";
+    todoDescription.value="";
     isCheck.checked = false;
     todoDescription.style.display = "none";
     
@@ -80,7 +84,9 @@ function checkRemove(e){
     const items=todo.children[0].innerText.split("\n");
     typeTodo.value=todoType.children[0].innerText;
     todoInput.value=items[0];
-    todoDescription.value=items[2];
+    if (items.length===2){
+        todoDescription.value=items[2];
+    }
     addTodo.textContent="Edit";
     const todoDiv=document.createElement("div");
     todoDiv.classList.add("todoi");
