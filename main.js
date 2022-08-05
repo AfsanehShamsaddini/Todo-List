@@ -79,12 +79,14 @@ function checkRemove(e){
 
    }
    else if (classList[1]==='fa-pen'){
+    isCheck.checked = true;
+    todoDescription.style.display = "block";
     const todo=item.parentElement.parentElement.parentElement;
     const todoType=item.parentElement.parentElement;
     const items=todo.children[0].innerText.split("\n");
     typeTodo.value=todoType.children[0].innerText;
     todoInput.value=items[0];
-    if (items.length===2){
+    if (items.length===3){
         todoDescription.value=items[2];
     }
     addTodo.textContent="Edit";
