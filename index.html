@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="todos-section container">
+       
+        <div class="form-container ">
+            <h2 class="todo--header">Todos</h2>
+            <div class="form-container__input">
+                <div class="input-container">
+                    <i class="fa-solid fa-t icon"></i>
+                    <input class="todo-title" type="text" placeholder="Task title...."/>
+                </div>
+                <div class="box">
+                    <select class="type-todos">
+                    <option selected >Task type</option>
+                      <option value="home">Home</option>
+                      <option value="work">Work</option>
+                      <option value="School">School</option>
+                    </select>
+                  </div>
+            </div>
+            <div>
+                <input class="todo-check__dec"  type="checkbox" name="task" >
+                <label for="task"> Add discription for this task.</label>
+            </div>
+            <textarea class="todo__description" name="" id="" cols="30" rows="10" placeholder="Description..."></textarea>
+            <button class="add primary--btn btn">New<i class="fa-duotone fa-plus mr-2"></i></button>                  
+        </div>
+        
+       <!-- <div class="modal">
+            <div class="modal-content">
+               <span class="close-button">&times;</span>
+
+               <div class="modal-content ">
+                <h2 class="todo--header">Edit Todo</h2>
+                <div class="todo-container__input">
+                    <div class="modal-container">
+                        <i class="fa-solid fa-pencil modal-icon"></i>
+                        <input class="modal-title" type="text" placeholder="Task title...."/>
+                    </div>
+                    <div class="modal-box">
+                        <select class="type-todos">
+                          <option selected value="home">Home</option>
+                          <option value="work">Work</option>
+                          <option  value="School">School</option>
+                        </select>
+                      </div>
+                </div>
+                <textarea class="modal__description" name="" id="" cols="30" rows="10" placeholder="Description..."></textarea>
+                <button class="edit primary--btn btn"><i class="fa-solid fa-pencil mr-2"></i>Edit</button>                  
+            </div>
+    
+              
+          </div>
+     </div>-->
+       
+        <div class="todo-container">
+            <div class="todo-container__header">
+                <div>
+                    <h2 class="todolist__header">Todo list</h2>
+                </div>
+                    <div class="box">
+                        <label class="filter-label">Filter by status</label>
+                        <select class="filter-todos">
+                            <option value="all" selected> All</option>
+                            <option value="complete" > Complete</option>
+                            <option value="uncomplete" >Uncomplete</option>
+                            
+                        </select>
+                    </div>
+               
+            </div>
+            <ul class="todolist"></ul>
+            
+        
+    </section>
+    <script src="/main.js"></script>
+</body>
+</html>
